@@ -21,7 +21,7 @@ foreach my $type (qw( Inline Platypus Raw Sweet XS ))
       sub {
         my \$result = test1(22);
       },
-      __PACKAGE__->can('test2') ? sub { my \$result = test2("hello there") } : undef,
+      __PACKAGE__->can('test2') ? sub { my \$result = test2("hello there" x 512) } : undef,
       sub {
         my \$result = test3(1,2,3,4,5,6,7,8,9,10);
       },
@@ -33,9 +33,9 @@ foreach my $type (qw( Inline Platypus Raw Sweet XS ))
     next;
   }
   
-  $tests{'single integer argument and return'}->{$type} = $impl_tests[0];
-  $tests{'single string argument and return'}->{$type} = $impl_tests[1] if defined $impl_tests[1];
-  $tests{'many integer arguments'}->{$type} = $impl_tests[2];
+  $tests{'single integer argument and return (test1)'}->{$type} = $impl_tests[0];
+  $tests{'single string argument and return  (test2)'}->{$type} = $impl_tests[1] if defined $impl_tests[1];
+  $tests{'many integer arguments             (test3)'}->{$type} = $impl_tests[2];
 }
 
 # avoid warning.  ignore fatal
