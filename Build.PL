@@ -8,10 +8,12 @@ my $builder = Module::Build->new(
   dist_author   => 'Graham Ollis <plicease@wdlabs.com>',
   license       => 'perl',
   requires      => {
-    'FFI::Raw'    => 0,
-    'FFI::Util'   => 0,
-    'Inline::C'   => 0.56,
-    'File::chdir' => 0,
+    'FFI::Raw'                 => 0,
+    'FFI::Util'                => 0,
+    'FFI::Platypus'            => 0,
+    'Inline::C'                => 0.56,
+    'File::chdir'              => 0,
+    'Archive::Libarchive::FFI' => 0,
   },
   configure_requires => {
     'Module::Build' => 0.42,

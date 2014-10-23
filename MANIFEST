@@ -8,6 +8,7 @@ lib/FFI/Performance/Inline.pm
 lib/FFI/Performance/Platypus.pm
 lib/FFI/Performance/Raw.pm
 lib/FFI/Performance/Sweet.pm
+lib/FFI/Performance/SweetLite.pm
 lib/FFI/Performance/XS.pm
 lib/FFI/Performance/XS.xs
 LICENSE
@@ -18,5 +19,6 @@ t/impl_inline.t
 t/impl_platypus.t
 t/impl_raw.t
 t/impl_sweet.t
+t/impl_sweet_lite.t
 t/impl_xs.t
 t/use.t

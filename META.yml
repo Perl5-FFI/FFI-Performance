@@ -2,7 +2,8 @@
 abstract: 'Measure FFI performance'
 author:
   - 'Graham Ollis <plicease@wdlabs.com>'
-build_requires: {}
+build_requires:
+  ExtUtils::CBuilder: '0'
 configure_requires:
   Module::Build: '0.42'
 dynamic_config: 1
@@ -15,9 +16,26 @@ name: FFI-Performance
 provides:
   FFI::Performance:
     file: lib/FFI/Performance.pm
+    version: '0.01'
+  FFI::Performance::Inline:
+    file: lib/FFI/Performance/Inline.pm
+  FFI::Performance::Platypus:
+    file: lib/FFI/Performance/Platypus.pm
+  FFI::Performance::Raw:
+    file: lib/FFI/Performance/Raw.pm
+  FFI::Performance::Sweet:
+    file: lib/FFI/Performance/Sweet.pm
+  FFI::Performance::SweetLite:
+    file: lib/FFI/Performance/SweetLite.pm
+  FFI::Performance::XS:
+    file: lib/FFI/Performance/XS.pm
+    version: '0.01'
 requires:
+  Archive::Libarchive::FFI: '0'
   FFI::Raw: '0'
   FFI::Util: '0'
+  File::chdir: '0'
+  Inline::C: '0.56'
 resources:
   license: http://dev.perl.org/licenses/
-version: '0'
+version: '0.01'

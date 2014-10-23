@@ -8,7 +8,7 @@ use Benchmark qw( timethese cmpthese );
 
 my %tests;
 
-foreach my $type (qw( Inline Platypus Raw Sweet XS ))
+foreach my $type (qw( Inline Platypus Raw Sweet SweetLite XS ))
 {
   #next if $type eq 'Sweet';
   my(@impl_tests) = eval '# line '. __LINE__ . ' "' . __FILE__ . "\n" . qq{

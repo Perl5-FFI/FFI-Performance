@@ -14,6 +14,11 @@
    },
    "name" : "FFI-Performance",
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::CBuilder" : "0"
+         }
+      },
       "configure" : {
          "requires" : {
             "Module::Build" : "0.42"
@@ -21,14 +26,37 @@
       },
       "runtime" : {
          "requires" : {
+            "Archive::Libarchive::FFI" : "0",
             "FFI::Raw" : "0",
-            "FFI::Util" : "0"
+            "FFI::Util" : "0",
+            "File::chdir" : "0",
+            "Inline::C" : "0.56"
          }
       }
    },
    "provides" : {
       "FFI::Performance" : {
-         "file" : "lib/FFI/Performance.pm"
+         "file" : "lib/FFI/Performance.pm",
+         "version" : "0.01"
+      },
+      "FFI::Performance::Inline" : {
+         "file" : "lib/FFI/Performance/Inline.pm"
+      },
+      "FFI::Performance::Platypus" : {
+         "file" : "lib/FFI/Performance/Platypus.pm"
+      },
+      "FFI::Performance::Raw" : {
+         "file" : "lib/FFI/Performance/Raw.pm"
+      },
+      "FFI::Performance::Sweet" : {
+         "file" : "lib/FFI/Performance/Sweet.pm"
+      },
+      "FFI::Performance::SweetLite" : {
+         "file" : "lib/FFI/Performance/SweetLite.pm"
+      },
+      "FFI::Performance::XS" : {
+         "file" : "lib/FFI/Performance/XS.pm",
+         "version" : "0.01"
       }
    },
    "release_status" : "stable",
@@ -37,5 +65,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0"
+   "version" : "0.01"
 }
