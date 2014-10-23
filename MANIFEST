@@ -3,6 +3,7 @@ Changes
 foo/foo.c
 foo/foo.h
 lib/FFI/Performance.pm
+lib/FFI/Performance/Inline.pm
 lib/FFI/Performance/Raw.pm
 lib/FFI/Performance/Sweet.pm
 lib/FFI/Performance/XS.pm
