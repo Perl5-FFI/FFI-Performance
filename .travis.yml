@@ -1,0 +1,16 @@
+language: perl
+
+install:
+  - cd foo ; make
+
+perl:
+  - "5.18"
+  - "5.20"
+
+script:
+  - cpanm --installdeps .
+  - perl Build.PL
+  - ./Build
+  - ./Build test
+
+

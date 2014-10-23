@@ -1,0 +1,41 @@
+{
+   "abstract" : "Measure FFI performance",
+   "author" : [
+      "Graham Ollis <plicease@wdlabs.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.421",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "FFI-Performance",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.42"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "FFI::Raw" : "0",
+            "FFI::Util" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "FFI::Performance" : {
+         "file" : "lib/FFI/Performance.pm"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0"
+}

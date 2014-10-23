@@ -1,0 +1,12 @@
+Build.PL
+Changes
+foo/foo.c
+foo/foo.h
+foo/foo.o
+foo/libfoo.so
+lib/FFI/Performance.pm
+LICENSE
+MANIFEST			This list of files
+META.json
+META.yml
+t/use.t
