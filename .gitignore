@@ -8,3 +8,4 @@
 *.so
 *.o
 /lib/FFI/Performance/XS.c
+/_Inline

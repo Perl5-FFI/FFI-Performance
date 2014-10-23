@@ -81,3 +81,4 @@
 \.so$
 \.a$
 lib/FFI/Performance/XS\.c$
+^_Inline
