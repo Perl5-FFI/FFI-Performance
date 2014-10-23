@@ -1,0 +1,53 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use v5.10;
+use FFI::Performance;
+use Benchmark qw( timethese cmpthese );
+
+my %tests;
+
+foreach my $type (qw( Inline Platypus Raw Sweet XS ))
+{
+  #next if $type eq 'Sweet';
+  my(@impl_tests) = eval '# line '. __LINE__ . ' "' . __FILE__ . "\n" . qq{
+    package
+      test::$type;
+    
+    use FFI::Performance::$type;
+    
+    (
+      sub {
+        my \$result = test1(22);
+      },
+      __PACKAGE__->can('test2') ? sub { my \$result = test2("hello there") } : undef,
+      sub {
+        my \$result = test3(1,2,3,4,5,6,7,8,9,10);
+      },
+    ),
+  };
+  if(my $error = $@)
+  {
+    warn "no $type";
+    next;
+  }
+  
+  $tests{'single integer argument and return'}->{$type} = $impl_tests[0];
+  $tests{'single string argument and return'}->{$type} = $impl_tests[1] if defined $impl_tests[1];
+  $tests{'many integer arguments'}->{$type} = $impl_tests[2];
+}
+
+# avoid warning.  ignore fatal
+eval q{ Inline->init };
+
+foreach my $test (keys %tests)
+{
+  say '';
+  say "## $test ##";
+  say '';
+  my $results = timethese(1024*1024*5, $tests{$test});
+  
+  say '';
+  cmpthese($results);
+}

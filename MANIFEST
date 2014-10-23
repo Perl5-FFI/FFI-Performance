@@ -1,3 +1,4 @@
+bin/ffi-performance-benchmark
 Build.PL
 Changes
 foo/foo.c

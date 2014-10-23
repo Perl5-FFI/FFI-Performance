@@ -22,4 +22,6 @@ my $builder = Module::Build->new(
   extra_linker_flags => '-Lfoo -lfoostatic',
 );
 
+$builder->add_to_cleanup('_Inline');
+
 $builder->create_build_script;

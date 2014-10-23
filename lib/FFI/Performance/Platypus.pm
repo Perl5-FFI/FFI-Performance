@@ -5,7 +5,7 @@ use warnings;
 use FFI::Platypus qw( ffi_type ffi_signature ffi_lib ffi_sub );
 use base qw( Exporter );
 
-our @EXPORT = qw( test1 test2 test3 );
+our @EXPORT = qw( test1 test3 );
 
 my $lib = 'foo/libfoo.so';
 

@@ -19,5 +19,6 @@ script:
   - perl Build.PL
   - ./Build 
   - ./Build test verbose=1
+  - perl -Mblib bin/ffi-performance-benchmark
 
 
