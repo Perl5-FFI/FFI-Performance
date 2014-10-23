@@ -2,9 +2,11 @@ Build.PL
 Changes
 foo/foo.c
 foo/foo.h
-foo/foo.o
-foo/libfoo.so
 lib/FFI/Performance.pm
+lib/FFI/Performance/Raw.pm
+lib/FFI/Performance/Sweet.pm
+lib/FFI/Performance/XS.pm
+lib/FFI/Performance/XS.xs
 LICENSE
 MANIFEST			This list of files
 META.json

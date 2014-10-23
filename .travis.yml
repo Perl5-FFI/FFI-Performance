@@ -4,7 +4,9 @@ install:
   - cpanm -v FFI::Raw
   - cpanm -v FFI::Util
   - cpanm -v https://dist.wdlabs.com/ffi/FFI-Sweet-0.001.tar.gz
-  - cd foo ; make
+  - cd foo
+  - make
+  - cd ..
 
 perl:
   - "5.18"

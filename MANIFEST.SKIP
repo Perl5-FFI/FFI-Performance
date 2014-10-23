@@ -76,3 +76,8 @@
 
 # Avoid archives of this distribution
 \bFFI-Performance-[\d\.\_]+
+
+\.o$
+\.so$
+\.a$
+lib/FFI/Performance/XS\.c$

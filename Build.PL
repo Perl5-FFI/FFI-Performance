@@ -16,6 +16,8 @@ my $builder = Module::Build->new(
   },
   build_requires => {
   },
+  extra_compiler_flags => '-Ifoo',
+  extra_linker_flags => '-Lfoo -lfoostatic',
 );
 
 $builder->create_build_script;

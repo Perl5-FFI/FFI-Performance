@@ -4,3 +4,7 @@
 /MYMETA.yml
 /blib
 /_build
+*.a
+*.so
+*.o
+/lib/FFI/Performance/XS.c
