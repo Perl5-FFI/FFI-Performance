@@ -6,6 +6,7 @@ install:
   - cpanm -v -n https://dist.wdlabs.com/ffi/FFI-Sweet-0.001.tar.gz
   - cpanm -v -n Inline::C
   - cpanm -v -n File::chdir
+  - cpanm -v -n https://dist.wdlabs.com/ffi/FFI-Platypus-0.01.tar.gz
   - cd foo
   - make
   - cd ..
