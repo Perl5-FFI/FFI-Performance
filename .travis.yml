@@ -8,9 +8,9 @@ perl:
   - "5.20"
 
 script:
-  - cpanm --installdeps .
+  - cpanm --installdeps -v .
   - perl Build.PL
-  - ./Build
-  - ./Build test
+  - ./Build 
+  - ./Build test verbose=1
 
 
