@@ -11,6 +11,7 @@ my $builder = Module::Build->new(
     'FFI::Raw'                 => 0,
     'FFI::Util'                => 0,
     'FFI::Platypus'            => 0,
+    'FFI::Sweet'               => 0,
     'Inline::C'                => 0.56,
     'File::chdir'              => 0,
     'Archive::Libarchive::FFI' => 0,
