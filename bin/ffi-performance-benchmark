@@ -46,7 +46,7 @@ foreach my $test (keys %tests)
   say '';
   say "## $test ##";
   say '';
-  my $results = timethese(1024*1024*5, $tests{$test});
+  my $results = timethese(1024*1024*16, $tests{$test});
   
   say '';
   cmpthese($results);
