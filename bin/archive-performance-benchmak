@@ -1,0 +1,72 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use v5.10;
+use Path::Class qw( file dir );
+use File::Temp qw( tempdir );
+use Benchmark qw( timethese cmpthese );
+
+my $archive_name = 'debian-7.7.0-amd64-netinst.iso';
+
+unless(-e $archive_name)
+{
+  system 'wget', 'http://cdimage.debian.org/debian-cd/7.7.0/amd64/iso-cd/debian-7.7.0-amd64-netinst.iso';
+}
+
+my $archive_path = file($archive_name)->absolute;
+
+my $template = '# line '. __LINE__ . ' "' . __FILE__ . "\n" . q{
+  sub {
+    package
+      Test::<type>;
+  
+    use File::chdir;
+    use File::Temp qw( tempdir );
+    use Archive::Libarchive::<type> qw( :all );
+  
+    local $CWD = tempdir( CLEANUP => 1 );
+  
+    my $a = archive_read_new();
+    archive_read_support_filter_all($a);
+    archive_read_support_format_all($a);
+    my $ext = archive_write_disk_new();
+    archive_write_disk_set_options($ext, ARCHIVE_EXTRACT_TIME | ARCHIVE_EXTRACT_PERM |
+                                         ARCHIVE_EXTRACT_ACL | ARCHIVE_EXTRACT_FFLAGS);
+    archive_write_disk_set_standard_lookup($ext);
+    my $r = archive_read_open_filename($a, $archive_path, 10240);
+  
+    while(1)
+   {
+       my $r = archive_read_next_header($a, my $entry);
+      last if $r == ARCHIVE_EOF;
+      $r = archive_write_header($ext, $entry);
+      while(1) {
+        my $r = archive_read_data_block($a, my $buff, my $offset);
+        last if $r == ARCHIVE_EOF;
+        archive_write_data_block($ext, $buff, $offset);
+      }
+    }
+  
+    archive_read_close($a);    archive_read_free($a);
+    archive_write_close($ext); archive_write_free($ext);
+  }
+};
+
+my %test;
+
+foreach my $type (qw( FFI XS ))
+{
+  my $source = $template;
+  $source =~ s{<type>}{$type}g;
+  $test{$type} = eval $source;
+  die $@ if $@;
+}
+
+say '';
+
+my $results = timethese(20, \%test);
+
+say '';
+
+cmpthese($results);

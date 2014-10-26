@@ -51,3 +51,4 @@ foreach my $test (keys %tests)
   say '';
   cmpthese($results);
 }
+
