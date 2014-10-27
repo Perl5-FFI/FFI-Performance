@@ -8,6 +8,7 @@ install:
   - cpanm -v -n File::chdir
   - cpanm -v -n https://dist.wdlabs.com/ffi/FFI-Platypus-0.01.tar.gz
   - cpanm -v -n Archive::Libarchive::FFI
+  - cpanm -v -n Archive::Libarchive::XS
   - cd foo
   - make
   - cd ..
@@ -21,5 +22,6 @@ script:
   - ./Build 
   - ./Build test verbose=1
   - perl -Mblib bin/ffi-performance-benchmark
+  - perl -Mblib bin/archive-performance-benchmak
 
 
