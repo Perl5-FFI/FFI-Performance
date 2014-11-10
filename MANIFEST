@@ -17,6 +17,7 @@ LICENSE
 MANIFEST			This list of files
 META.json
 META.yml
+README.pod
 t/impl_inline.t
 t/impl_platypus.t
 t/impl_raw.t
