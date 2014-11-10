@@ -1,6 +1,8 @@
+bin/archive-performance-benchmak
 bin/ffi-performance-benchmark
 Build.PL
 Changes
+doco/advent.pod
 foo/foo.c
 foo/foo.h
 lib/FFI/Performance.pm

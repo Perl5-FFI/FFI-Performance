@@ -11,10 +11,13 @@
 \b_darcs\b
 \B\.cvsignore$
 
+
 # Avoid VMS specific MakeMaker generated files
 \bDescrip.MMS$
 \bDESCRIP.MMS$
 \bdescrip.mms$
+
+\bdebian-7\.7\.0-amd64-netinst\.iso$
 
 # Avoid Makemaker generated and utility files.
 \bMANIFEST\.bak
