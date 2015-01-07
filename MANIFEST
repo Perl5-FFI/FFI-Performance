@@ -5,6 +5,8 @@ Changes
 doco/advent.pod
 foo/foo.c
 foo/foo.h
+inc/My/LibFoo.pm
+inc/My/ModuleBuild.pm
 lib/FFI/Performance.pm
 lib/FFI/Performance/Inline.pm
 lib/FFI/Performance/Platypus.pm

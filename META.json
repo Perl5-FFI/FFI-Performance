@@ -21,13 +21,17 @@
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.42"
+            "File::chdir" : "0",
+            "Module::Build" : "0.42",
+            "autodie" : "0"
          }
       },
       "runtime" : {
          "requires" : {
             "Archive::Libarchive::FFI" : "0",
+            "FFI::Platypus" : "0.02",
             "FFI::Raw" : "0",
+            "FFI::Sweet" : "0",
             "FFI::Util" : "0",
             "File::chdir" : "0",
             "Inline::C" : "0.56"
