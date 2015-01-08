@@ -9,9 +9,6 @@ install:
   - cpanm -v -n https://dist.wdlabs.com/ffi/FFI-Platypus-0.01.tar.gz
   - cpanm -v -n Archive::Libarchive::FFI
   #- cpanm -v -n Archive::Libarchive::XS
-  - cd foo
-  - make
-  - cd ..
 
 perl:
   - "5.18"
