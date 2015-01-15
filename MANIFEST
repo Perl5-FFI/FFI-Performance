@@ -10,6 +10,7 @@ inc/My/ModuleBuild.pm
 lib/FFI/Performance.pm
 lib/FFI/Performance/Inline.pm
 lib/FFI/Performance/Platypus.pm
+lib/FFI/Performance/PlatypusSl.pm
 lib/FFI/Performance/Raw.pm
 lib/FFI/Performance/Sweet.pm
 lib/FFI/Performance/SweetLite.pm
@@ -22,6 +23,7 @@ META.yml
 README.pod
 t/impl_inline.t
 t/impl_platypus.t
+t/impl_platypus_sl.pl
 t/impl_raw.t
 t/impl_sweet.t
 t/impl_sweet_lite.t
