@@ -14,6 +14,7 @@ lib/FFI/Performance/PlatypusSl.pm
 lib/FFI/Performance/Raw.pm
 lib/FFI/Performance/Sweet.pm
 lib/FFI/Performance/SweetLite.pm
+lib/FFI/Performance/SweetLite2.pm
 lib/FFI/Performance/XS.pm
 lib/FFI/Performance/XS.xs
 LICENSE
@@ -27,5 +28,6 @@ t/impl_platypus_sl.pl
 t/impl_raw.t
 t/impl_sweet.t
 t/impl_sweet_lite.t
+t/impl_sweet_lite2.t
 t/impl_xs.t
 t/use.t

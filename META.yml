@@ -23,6 +23,8 @@ provides:
     file: lib/FFI/Performance/Inline.pm
   FFI::Performance::Platypus:
     file: lib/FFI/Performance/Platypus.pm
+  FFI::Performance::PlatypusSl:
+    file: lib/FFI/Performance/PlatypusSl.pm
   FFI::Performance::Raw:
     file: lib/FFI/Performance/Raw.pm
   FFI::Performance::Sweet:
@@ -34,7 +36,7 @@ provides:
     version: '0.01'
 requires:
   Archive::Libarchive::FFI: '0'
-  FFI::Platypus: '0.02'
+  FFI::Platypus: '0.09'
   FFI::Raw: '0'
   FFI::Sweet: '0'
   FFI::Util: '0'
