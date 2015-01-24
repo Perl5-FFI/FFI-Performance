@@ -31,6 +31,8 @@ provides:
     file: lib/FFI/Performance/Sweet.pm
   FFI::Performance::SweetLite:
     file: lib/FFI/Performance/SweetLite.pm
+  FFI::Performance::SweetLite2:
+    file: lib/FFI/Performance/SweetLite2.pm
   FFI::Performance::XS:
     file: lib/FFI/Performance/XS.pm
     version: '0.01'
