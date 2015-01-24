@@ -6,7 +6,7 @@ install:
   - cpanm -v -n https://dist.wdlabs.com/ffi/FFI-Sweet-0.001.tar.gz
   - cpanm -v -n Inline::C
   - cpanm -v -n File::chdir
-  - cpanm -v -n https://dist.wdlabs.com/FFI-Platypus-0.09.tar.gz
+  - cpanm -v -n FFI::Platypus
   - cpanm -v -n Archive::Libarchive::FFI
   #- cpanm -v -n Archive::Libarchive::XS
   - cpanm -v -n IPC::System::Simple
