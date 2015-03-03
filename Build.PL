@@ -13,6 +13,7 @@ my $builder = My::ModuleBuild->new(
     'FFI::Util'                => 0,
     'FFI::Platypus'            => 0.09,
     'FFI::Sweet'               => 0,
+    'FFI::CheckLib'            => 0,
     'Inline::C'                => 0.56,
     'File::chdir'              => 0,
     'Archive::Libarchive::FFI' => 0,

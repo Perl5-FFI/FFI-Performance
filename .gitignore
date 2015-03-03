@@ -6,6 +6,7 @@
 /_build
 *.a
 *.so
+*.bundle
 *.o
 /lib/FFI/Performance/XS.c
 /_Inline

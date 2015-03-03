@@ -3,11 +3,12 @@ package FFI::Performance::Raw;
 use strict;
 use warnings;
 use FFI::Raw;
+use FFI::CheckLib;
 use base qw( Exporter );
 
 our @EXPORT = qw( test1 test2 test3 );
 
-my $lib = 'foo/libfoo.so';
+my $lib = find_lib lib => 'foo', libpath => 'foo';
 
 die "no such library $lib" unless -e $lib;
 
