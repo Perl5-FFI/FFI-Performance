@@ -4,7 +4,7 @@
       "Graham Ollis <plicease@wdlabs.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.421",
+   "generated_by" : "Module::Build version 0.4211",
    "license" : [
       "perl_5"
    ],
@@ -29,6 +29,7 @@
       "runtime" : {
          "requires" : {
             "Archive::Libarchive::FFI" : "0",
+            "FFI::CheckLib" : "0",
             "FFI::Platypus" : "0.09",
             "FFI::Raw" : "0",
             "FFI::Sweet" : "0",
@@ -45,6 +46,9 @@
       },
       "FFI::Performance::Inline" : {
          "file" : "lib/FFI/Performance/Inline.pm"
+      },
+      "FFI::Performance::OO" : {
+         "file" : "lib/FFI/Performance/OO.pm"
       },
       "FFI::Performance::Platypus" : {
          "file" : "lib/FFI/Performance/Platypus.pm"

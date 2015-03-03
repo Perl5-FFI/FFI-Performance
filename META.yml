@@ -9,7 +9,7 @@ configure_requires:
   Module::Build: '0.42'
   autodie: '0'
 dynamic_config: 1
-generated_by: 'Module::Build version 0.421, CPAN::Meta::Converter version 2.143240'
+generated_by: 'Module::Build version 0.4211, CPAN::Meta::Converter version 2.143240'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -21,6 +21,8 @@ provides:
     version: '0.01'
   FFI::Performance::Inline:
     file: lib/FFI/Performance/Inline.pm
+  FFI::Performance::OO:
+    file: lib/FFI/Performance/OO.pm
   FFI::Performance::Platypus:
     file: lib/FFI/Performance/Platypus.pm
   FFI::Performance::PlatypusSl:
@@ -38,6 +40,7 @@ provides:
     version: '0.01'
 requires:
   Archive::Libarchive::FFI: '0'
+  FFI::CheckLib: '0'
   FFI::Platypus: '0.09'
   FFI::Raw: '0'
   FFI::Sweet: '0'
