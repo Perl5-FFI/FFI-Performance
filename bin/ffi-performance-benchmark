@@ -8,7 +8,7 @@ use Benchmark qw( timethese cmpthese );
 
 my %tests;
 
-foreach my $type (qw( Inline Platypus PlatypusSl Raw Sweet SweetLite SweetLite2 XS ))
+foreach my $type (sort qw( Inline Platypus PlatypusSl Raw Sweet SweetLite SweetLite2 XS OO ))
 {
   next if $type eq 'Sweet';
   my(@impl_tests) = eval '# line '. __LINE__ . ' "' . __FILE__ . "\n" . qq{
@@ -33,20 +33,20 @@ foreach my $type (qw( Inline Platypus PlatypusSl Raw Sweet SweetLite SweetLite2 
     next;
   }
   
-  $tests{'single integer argument and return (test1)'}->{$type} = $impl_tests[0];
-  $tests{'single string argument and return  (test2)'}->{$type} = $impl_tests[1] if defined $impl_tests[1];
-  $tests{'many integer arguments             (test3)'}->{$type} = $impl_tests[2];
+  $tests{'01 single integer argument and return'}->{$type} = $impl_tests[0];
+  $tests{'02 single string argument and return '}->{$type} = $impl_tests[1] if defined $impl_tests[1];
+  $tests{'03 many integer arguments            '}->{$type} = $impl_tests[2];
 }
 
 # avoid warning.  ignore fatal
 eval q{ Inline->init };
 
-foreach my $test (keys %tests)
+foreach my $test (sort keys %tests)
 {
   say '';
   say "## $test ##";
   say '';
-  my $results = timethese(1024*1024*16, $tests{$test});
+  my $results = timethese(1024*1024*10, $tests{$test});
   
   say '';
   cmpthese($results);

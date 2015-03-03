@@ -11,4 +11,10 @@ our $VERSION = '0.01';
 require XSLoader;
 XSLoader::load('FFI::Performance::XS', $VERSION);
 
+sub new
+{
+  my($class) = @_;
+  bless {}, $class;
+}
+
 1;
