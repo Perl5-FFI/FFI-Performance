@@ -25,10 +25,13 @@ foreach my $type (sort qw( Inline Platypus PlatypusSl Raw Sweet SweetLite SweetL
       sub {
         my \$result = test3(1,2,3,4,5,6,7,8,9,10);
       },
+      __PACKAGE__->can('test4') ? sub { my \$result = test4(\\1,\\2) } : undef,
+      __PACKAGE__->can('test5') ? sub { my \$result = test5(2, [1,2]) } : undef,
     ),
   };
   if(my $error = $@)
   {
+    warn $error;
     warn "no $type";
     next;
   }
@@ -36,6 +39,8 @@ foreach my $type (sort qw( Inline Platypus PlatypusSl Raw Sweet SweetLite SweetL
   $tests{'01 single integer argument and return'}->{$type} = $impl_tests[0];
   $tests{'02 single string argument and return '}->{$type} = $impl_tests[1] if defined $impl_tests[1];
   $tests{'03 many integer arguments            '}->{$type} = $impl_tests[2];
+  $tests{'04 pointer to integer test           '}->{$type} = $impl_tests[3] if defined $impl_tests[3];
+  $tests{'05 array of integer test             '}->{$type} = $impl_tests[4] if defined $impl_tests[4];
 }
 
 # avoid warning.  ignore fatal

@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use base qw( Exporter );
 
-our @EXPORT = qw( test1 test2 test3 );
+our @EXPORT = qw( test1 test2 test3 test4 test5 );
 
 our $VERSION = '0.01';
 
