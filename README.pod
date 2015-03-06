@@ -12,6 +12,18 @@ FFI::Performance - Benchmarks and tests for Perl + FFI + Performance
 
 =head1 DESCRIPTION
 
+This code was originally hacked together to get some relative benchmarks 
+for a talk that I gave at the Pittsburgh Perl Workshop in 2014.  At that 
+time, L<FFI::Platypus> was just a prototype (and the interface was quite 
+different), but the "killer feature" which is the ability to attach a C 
+function as a Perl xsub was already there.  Since then L<FFI::Platypus> 
+has been completely re-written and now provides practical FFI bindings 
+for Perl.  I've kept this companion non-CPAN distrubtion up to date to 
+use the now production Platypus interface.  The code as it was when I 
+gave the PPW talk is tagged as C<ppw2014>.
+
+What follows is the text I wrote after the talk:
+
 This is the companion code to a talk that I gave at the Pittsburgh Perl
 Workshop 2014.  Here is a recording:
 
@@ -32,6 +44,8 @@ https://twitter.com/mikegrb/status/531186796450033664/photo/1
 =head1 SEE ALSO
 
 =over
+
+=item L<FFI::Platypus>
 
 =item L<FFI::Raw>
 
