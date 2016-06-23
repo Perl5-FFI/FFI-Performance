@@ -1,11 +1,11 @@
 use strict;
 use warnings;
-use Test::More tests => 6;
+use Test::More tests => 5;
 
 use_ok 'FFI::Performance';
 note $INC{'FFI/Performance.pm'};
 use_ok 'FFI::Performance::Raw';
-use_ok 'FFI::Performance::Sweet';
+#use_ok 'FFI::Performance::Sweet';
 use_ok 'FFI::Performance::Platypus';
 use_ok 'FFI::Performance::Inline';
 
@@ -18,4 +18,4 @@ use_ok 'FFI::Performance::XS';
 
 }
 
-
+done_testing;

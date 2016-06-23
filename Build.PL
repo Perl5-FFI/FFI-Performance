@@ -12,7 +12,7 @@ my $builder = My::ModuleBuild->new(
     'FFI::Raw'                 => 0,
     'FFI::Util'                => 0,
     'FFI::Platypus'            => 0.09,
-    'FFI::Sweet'               => 0,
+    #'FFI::Sweet'               => 0,
     'FFI::CheckLib'            => 0,
     'Inline::C'                => 0.56,
     'File::chdir'              => 0,
@@ -22,6 +22,10 @@ my $builder = My::ModuleBuild->new(
     'Module::Build' => 0.42,
     'autodie'       => 0,
     'File::chdir'   => 0,
+  },
+  test_requires => {
+    'Test2' => '1.302015',
+    'Test2::Suite' => '0.000030',
   },
   build_requires => {
   },
